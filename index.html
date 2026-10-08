@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Based Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>☁️ Employee Management System</h1>
+            <p>Cloud-Based Employee Management Dashboard</p>
+        </div>
+        <div class="status">● System Online</div>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <div class="card"><h3>Total Employees</h3><p id="totalEmployees">0</p></div>
+            <div class="card"><h3>Departments</h3><p id="totalDepartments">0</p></div>
+            <div class="card"><h3>Active Employees</h3><p id="activeEmployees">0</p></div>
+        </section>
+
+        <section class="panel">
+            <h2>Add Employee</h2>
+            <form id="employeeForm">
+                <input id="name" type="text" placeholder="Employee Name" required>
+                <input id="email" type="email" placeholder="Email" required>
+                <input id="department" type="text" placeholder="Department" required>
+                <input id="role" type="text" placeholder="Job Role" required>
+                <select id="status" required>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+                <button type="submit">Add Employee</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="toolbar">
+                <h2>Employee Records</h2>
+                <input id="search" type="search" placeholder="Search employee...">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th><th>Email</th><th>Department</th>
+                            <th>Role</th><th>Status</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTable"></tbody>
+                </table>
+            </div>
+            <p id="emptyMessage" class="empty">No employee records yet.</p>
+        </section>
+
+        <section class="panel cloud-info">
+            <h2>☁️ Cloud Computing Features</h2>
+            <ul>
+                <li>Centralized employee data management</li>
+                <li>Browser-based access</li>
+                <li>Cloud-ready architecture</li>
+                <li>Can be connected to Firebase Firestore for real cloud storage</li>
+                <li>Can be deployed using Firebase Hosting, GitHub Pages, or another web host</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Cloud Computing Mini Project • Employee Management System</footer>
+    <script src="script.js"></script>
+</body>
+</html>
